@@ -42,10 +42,10 @@ if (form) {
         note.textContent = "Thanks — message sent. We'll get back to you soon.";
         form.reset();
       } else {
-        note.textContent = 'Something went wrong. Please reach out via LinkedIn instead.';
+        note.textContent = 'Something went wrong. Please email amtechsolutionspvtltd@gmail.com instead.';
       }
     } catch (err) {
-      note.textContent = 'Network error. Please reach out via LinkedIn instead.';
+      note.textContent = 'Network error. Please email amtechsolutionspvtltd@gmail.com instead.';
     } finally {
       submitBtn.disabled = false;
     }
