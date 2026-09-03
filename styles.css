@@ -115,6 +115,12 @@ p { margin: 0 0 1em; }
 .hero-lede { font-size: 18px; color: var(--ink-soft); max-width: 620px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 28px 0 18px; }
 .hero-trust { font-size: 14px; color: var(--ink-soft); }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 24px; }
+.hero-tags span {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
+  color: var(--ink-soft); background: #fff; border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 14px;
+}
 
 /* ---------- Tracker widget (hero visual) ---------- */
 .tracker-card {
@@ -206,7 +212,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Platforms ---------- */
 .platform-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 44px;
+  display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 44px;
   border-top: 1px solid var(--line); border-left: 1px solid var(--line);
 }
 .platform {
@@ -223,16 +229,36 @@ p { margin: 0 0 1em; }
 .platform-badge--fluent { background: var(--c-green); }
 .platform-badge--sap { background: var(--c-indigo); }
 .platform-badge--wcs { background: var(--c-rose); }
+.platform-badge--java { background: var(--c-blue); }
+.platform-badge--angular { background: var(--c-rose); }
+.platform-badge--ts { background: var(--c-indigo); }
+.platform-badge--sql { background: var(--c-green); }
+.platform-badge--api { background: var(--ink); }
 .platform-name {
   font-family: var(--font-mono); font-size: 14.5px; font-weight: 600;
   letter-spacing: 0.02em; color: var(--ink); margin: 0 0 6px;
 }
 .platform-desc { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
 
+/* ---------- Problems We Solve ---------- */
+.problem-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; margin-top: 40px;
+}
+.problem-item { display: flex; align-items: flex-start; gap: 12px; }
+.problem-icon {
+  flex: none; width: 22px; height: 22px; border-radius: 50%; margin-top: 2px;
+  background: var(--accent-soft); display: flex; align-items: center; justify-content: center;
+}
+.problem-icon svg {
+  width: 12px; height: 12px; fill: none; stroke: var(--accent-dark);
+  stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+}
+.problem-item p { margin: 0; font-size: 15.5px; color: var(--ink-soft); }
+
 /* ---------- Timeline (Approach) ---------- */
 .timeline {
   list-style: none; margin: 52px 0 0; padding: 0;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px;
   position: relative;
 }
 .timeline::before {
@@ -279,6 +305,28 @@ p { margin: 0 0 1em; }
 .training-subhead + .platform-grid,
 .training-subhead + .card-grid { margin-top: 22px; }
 .training-demo-btn { margin-top: 22px; }
+.training-intro { color: var(--ink-soft); font-size: 16px; max-width: 720px; margin-top: 4px; }
+
+.contact-audience { margin: 20px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.contact-audience p { margin: 0; color: var(--dark-text-soft); font-size: 15.5px; }
+.contact-audience strong { color: #fff; }
+.contact-audience a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.contact-audience a:hover { color: #e2a069; }
+
+/* ---------- FAQ ---------- */
+.faq-list { margin-top: 40px; display: flex; flex-direction: column; max-width: 760px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.faq-item summary {
+  cursor: pointer; font-weight: 600; font-size: 16px; color: var(--ink);
+  list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; font-size: 22px; line-height: 1; color: var(--accent); flex: none;
+  transition: transform .2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { margin: 12px 0 0; color: var(--ink-soft); font-size: 15px; }
 
 .whatsapp-row {
   display: flex; align-items: center; gap: 16px; text-decoration: none;
@@ -324,7 +372,7 @@ p { margin: 0 0 1em; }
   .tracker-card { max-width: 440px; }
 }
 @media (max-width: 620px) {
-  .card-grid, .timeline, .platform-grid { grid-template-columns: 1fr; }
+  .card-grid, .timeline, .platform-grid, .problem-grid { grid-template-columns: 1fr; }
   .site-nav ul {
     display: none; position: absolute; top: 72px; left: 0; right: 0;
     background: var(--paper); flex-direction: column; align-items: flex-start;
