@@ -272,6 +272,21 @@ p { margin: 0 0 1em; }
 .contact-links a { color: #fff; text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--dark-line); padding-bottom: 8px; display: inline-block; }
 .contact-links a:hover { color: #e2a069; }
 
+.whatsapp-row {
+  display: flex; align-items: center; gap: 16px; text-decoration: none;
+  background: var(--dark-bg-alt); border: 1px solid var(--dark-line); border-radius: var(--radius);
+  padding: 16px 18px; margin: 24px 0; transition: border-color .2s ease;
+}
+.whatsapp-row:hover { border-color: #25D366; }
+.whatsapp-icon-badge {
+  width: 42px; height: 42px; border-radius: 10px; background: #25D366;
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.whatsapp-icon-badge svg { width: 22px; height: 22px; fill: #fff; }
+.whatsapp-copy { display: flex; flex-direction: column; gap: 2px; }
+.whatsapp-prompt { font-size: 14px; color: var(--dark-text-soft); }
+.whatsapp-cta { font-size: 15px; font-weight: 600; color: #fff; }
+
 .contact-form {
   background: var(--dark-bg-alt); border: 1px solid var(--dark-line); border-radius: var(--radius);
   padding: 28px; display: flex; flex-direction: column; gap: 6px;
