@@ -222,6 +222,7 @@ p { margin: 0 0 1em; }
 .platform-badge--ibm { background: var(--ink); }
 .platform-badge--fluent { background: var(--c-green); }
 .platform-badge--sap { background: var(--c-indigo); }
+.platform-badge--wcs { background: var(--c-rose); }
 .platform-name {
   font-family: var(--font-mono); font-size: 14.5px; font-weight: 600;
   letter-spacing: 0.02em; color: var(--ink); margin: 0 0 6px;
@@ -271,6 +272,15 @@ p { margin: 0 0 1em; }
 .contact-links { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .contact-links a { color: #fff; text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--dark-line); padding-bottom: 8px; display: inline-block; }
 .contact-links a:hover { color: #e2a069; }
+.contact-links--light a { color: var(--ink); border-bottom-color: var(--line); }
+.contact-links--light a:hover { color: var(--accent-dark); }
+
+.training-subhead {
+  font-family: var(--font-head); font-size: 19px; font-weight: 700;
+  color: var(--ink); margin: 48px 0 0;
+}
+.training-subhead + .platform-grid,
+.training-subhead + .card-grid { margin-top: 22px; }
 
 .whatsapp-row {
   display: flex; align-items: center; gap: 16px; text-decoration: none;
