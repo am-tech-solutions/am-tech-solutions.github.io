@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://am-tech-solutions.github.io/sitemap.xml
