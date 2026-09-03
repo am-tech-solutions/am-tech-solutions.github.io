@@ -17,6 +17,36 @@ if (navToggle) {
   });
 }
 
+// Hero order tracker: cycle through statuses on a loop
+const trackerSteps = document.querySelectorAll('.tracker-steps li');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (trackerSteps.length && !prefersReducedMotion) {
+  let activeIndex = [...trackerSteps].findIndex((li) => li.classList.contains('is-active'));
+  if (activeIndex === -1) activeIndex = 0;
+
+  const render = () => {
+    trackerSteps.forEach((li, i) => {
+      li.classList.remove('is-done', 'is-active');
+      const timeEl = li.querySelector('.tracker-time');
+      if (i < activeIndex) {
+        li.classList.add('is-done');
+        timeEl.textContent = li.dataset.time;
+      } else if (i === activeIndex) {
+        li.classList.add('is-active');
+        timeEl.textContent = 'In progress';
+      } else {
+        timeEl.textContent = 'Pending';
+      }
+    });
+  };
+
+  render();
+  setInterval(() => {
+    activeIndex = (activeIndex + 1) % trackerSteps.length;
+    render();
+  }, 2400);
+}
+
 // Contact form: submit via fetch so we can show an inline status message
 const form = document.querySelector('.contact-form');
 if (form) {
