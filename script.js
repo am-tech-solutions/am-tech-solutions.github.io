@@ -72,10 +72,10 @@ if (form) {
         note.textContent = "Thanks — message sent. We'll get back to you soon.";
         form.reset();
       } else {
-        note.textContent = 'Something went wrong. Please email amtechsolutionspvtltd@gmail.com instead.';
+        note.textContent = 'Something went wrong. Please email contact@amtechsolutionservices.in instead.';
       }
     } catch (err) {
-      note.textContent = 'Network error. Please email amtechsolutionspvtltd@gmail.com instead.';
+      note.textContent = 'Network error. Please email contact@amtechsolutionservices.in instead.';
     } finally {
       submitBtn.disabled = false;
     }
