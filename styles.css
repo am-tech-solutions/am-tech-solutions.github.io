@@ -255,6 +255,19 @@ p { margin: 0 0 1em; }
 }
 .problem-item p { margin: 0; font-size: 15.5px; color: var(--ink-soft); }
 
+/* ---------- Case Studies ---------- */
+.case-card { margin-top: 40px; }
+.case-video {
+  position: relative; width: 100%; padding-top: 56.25%; margin: 0;
+  border-radius: var(--radius); overflow: hidden; background: var(--ink);
+  box-shadow: var(--shadow);
+}
+.case-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.case-body { max-width: 760px; margin-top: 26px; }
+.case-body h3 { font-size: 22px; margin: 4px 0 16px; }
+.case-body p { color: var(--ink-soft); font-size: 15.5px; }
+.case-body strong { color: var(--ink); }
+
 /* ---------- Timeline (Approach) ---------- */
 .timeline {
   list-style: none; margin: 52px 0 0; padding: 0;
